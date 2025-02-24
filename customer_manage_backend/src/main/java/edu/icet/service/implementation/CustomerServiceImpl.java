@@ -32,8 +32,12 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void deleteCustomer(Integer id) {
-        repository.deleteById(id);
+    public boolean deleteCustomer(Integer id) {
+        if(searchById(id)!=null){
+            repository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 
     @Override

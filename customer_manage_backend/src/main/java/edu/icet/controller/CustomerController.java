@@ -30,8 +30,8 @@ public class CustomerController {
 
     @DeleteMapping("/delete/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public void deleteCustomer(@PathVariable Integer id){
-        service.deleteCustomer(id);
+    public boolean deleteCustomer(@PathVariable Integer id){
+        return service.deleteCustomer(id);
     }
 
     @PutMapping("/update-customer")

@@ -83,7 +83,5 @@ function searchCustomer() {
                 searchField.value = "";
             }
 
-            
-
         })
 }
